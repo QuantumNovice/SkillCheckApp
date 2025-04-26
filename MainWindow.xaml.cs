@@ -26,15 +26,15 @@ namespace SkillCheckApp
         {
             InitializeComponent();
             _scheduleTimer.Tick += OnScheduleTimerTick;
-            SetRandomInterval();
+            SetRandomInterval();    
             _scheduleTimer.Start();
         }
 
         private void SetRandomInterval()
         {
             // example: random between 2 and 5 minutes
-            double minutes = _rand.NextDouble() * (5.0 - 2.0) + 2.0;
-            
+            // double minutes = _rand.NextDouble() * (5.0 - 2.0) + 2.0;
+            double minutes = 0;
             _scheduleTimer.Interval = TimeSpan.FromMinutes(minutes);
         }
 
